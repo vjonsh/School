@@ -1,1 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>계원예술대학교</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="jquery.bxslider.min.css">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  
+  <style>
+    body {
+      font-family: 'Noto Sans Korean', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 60px;
+    }
+
+    nav ul li {
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+
+    nav ul li:hover {
+      opacity: 0.6;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: -100;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #007aff;
+      color: #fff;
+      border-radius: 50px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0069d9;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+      padding: 100px 30px;
+    }
+
+    .grid-item {
+      text-align: center;
+    }
+
+    .grid-item img {
+      margin-bottom: 20px;
+    }
+
+    .grid-item h3 {
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .news {
+      padding: 100px 30px;
+    }
+
+    .news h2 {
+      font-size: 36px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .news ul {
+      display: flex;
+    }
+
+    .news ul li {
+      width: 33.333%;
+      padding: 0 15px;
+      box-sizing: border-box;
+    }
+
+    .news ul li a {
+      display: block;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .news ul li img {
+      transition: transform 0.3s;
+    }
+
+    .news ul li a:hover img {
+      transform: scale(1.1);
+    }
+
+    .news ul li p {
+      font-size: 18px;
+      margin-top: 20px; 
+    }
+
+    footer {
+      padding: 50px 30px;
+      background-color: #f8f8f8; 
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    .footer-info {
+      text-align: center;
+    }
+
+    .footer-info img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .footer-info p {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .news ul {
+        flex-direction: column;
+      }
+
+      .news ul li {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 50px;
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#"><img src="logo.png" alt="계원예술대학교 로고"></a></li>
+        <li><a href="#">대학소개</a></li>
+        <li><a href="#">입학안내</a></li>
+        <li><a href="#">계열ㆍ학과</a></li>
+        <li><a href="#">학사안내</a></li>
+        <li><a href="#">대학생활</a></li>
+        <li><a href="#">뉴스센터</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <video autoplay loop muted>
+        <source src="hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-text">
+        <h1>Creative Player Kaywon,<br>Only One Kaywon</h1>
+        <a href="#" class="btn">입학안내</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="grid-item">
+        <img src="dept1.jpg" alt="학과 이미지">
+        <h3>Arts계열</h3>
+        <p>창의적인 예술인재 양성</p>
+      </div>
+      <div class="grid-item">
+        <img src="dept2.jpg" alt="학과 이미지">
+        <h3>Communication계열</h3>
+        <p>소통과 공감의 디자인 교육</p>
+      </div>
+      <div class="grid-item">
+        <img src="dept3.jpg" alt="학과 이미지">
+        <h3>Media&amp;Technology계열</h3>
+        <p>첨단 콘텐츠 크리에이터 육성</p>
+      </div>
+      <div class="grid-item">
+        <img src="dept4.jpg" alt="학과 이미지">
+        <h3>Lifestyle계열</h3>
+        <p>생활환경을 디자인하는 전문가</p>
+      </div>
+    </section>
+
+    <section class="news">
+      <h2>계원뉴스</h2>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="news1.jpg" alt="뉴스 이미지">
+            <p>문화예술로 장애·비장애 경계를 허무는 통합문화축제 열려</p>
+          </a> 
+        </li>
+        <li>
+          <a href="#">
+            <img src="news2.jpg" alt="뉴스 이미지">
+            <p>계원예대, '대학일자리플러스센터' &amp; '고교생맞춤형고용서비스' 운영기관 선정</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="news3.jpg" alt="뉴스 이미지">
+            <p>계원예대 교수 2인, 미국 미니애폴리스 미술관서 전시</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">개인정보처리방침</a>
+      <a href="#">정보공개</a>
+      <a href="#">찾아오시는 길</a>  
+    </div>
+    <div class="footer-info">
+      <img src="footer-logo.png" alt="계원예술대학교 로고">
+      <p>16038 경기도 의왕시 계원대학로 66(내손동) 계원예술대학교</p>
+      <p>대표전화 1899-5823 팩스 031-424-7509</p>
+      <p>E-mail kaywon@kaywon.ac.kr</p>
+      <p>copyright(c) 2018. Kaywon University of Art &amp; Design.</p>
+    </div>
+  </footer>
+</body>
+</html>
